@@ -6,103 +6,36 @@ replace the multiple document viewers that exist on the GNOME Desktop
 with a single simple application.
 
 Runtime requirements:
-  cygwin-1.5.18-1
-  GConf2-2.8.1-1
-  ORBit2-2.12.3-1
-  atk-runtime-1.9.1-1
-  dbus-0.36.1-1
-  dbus-glib-0.36.1-1
-  expat-1.95.8-1
-  glib2-runtime-2.6.5-1
-  gnome-keyring-0.4.3-1
-  gnome-vfs2-2.8.4-1
-  gtk2-x11-runtime-2.6.8-1
-  libXft2-2.1.6-1
-  libart_lgpl2-2.3.16-1
-  libaudiofile0-0.2.6-2
-  libbonobo20-2.8.0-1
-  libbonoboui2-2.8.0-1
-  libcairo2-1.0.0-1
-  libesound0-0.2.36-1
-  libfontconfig1-2.2.2-1
-  libfreetype26-2.1.5-1
+  cygwin-1.5.20-1
+  GConf2-2.14.0-2
+  gnome-vfs2-2.14.2-1
+  gtk2-x11-2.8.19-1
+  libX11_6-1.0.0-2
+  libdbus-glib_1_2-0.61-2
+  libdjvulibre15-3.5.17-1
   libglade2-2.5.1-1
-  libglitz1-0.4.4-1
-  libgnome2-2.8.0-1
-  libgnomecanvas2-2.10.2-1
-  libgnomeprint22-2.10.3-1
-  libgnomeprintui22-2.10.2-1
-  libgnomeui2-2.8.1-1
-  libiconv2-1.9.2-1
-  libintl3-0.14.1-1
-  libjpeg62-6b-11
+  libgnomeprint22-2.12.1-2
+  libgnomeprintui22-2.12.1-1
+  libgnomeui2-2.14.1-1
   libkpathsea4-3.0.0-3
-  libpng12-1.2.8-2
-  libpopt0-1.6.4-4
+  libpoppler-glib_0-0.4.5-1
   libtiff5-3.7.3-1
-  libxml2-2.6.20-3
-  minires-1.00-1
-  nautilus-2.8.2-1
-  pango-runtime-1.8.1-1
-  poppler-0.4.1-1
-  poppler-glib-0.4.1-1
   t1lib-5.1.0-1
-  xorg-x11-bin-dlls-6.8.2.0-1
-  zlib-1.2.3-1
 
 Build requirements:
-  cygwin-1.5.18-1
+(besides corresponding devel packages)
+  cygwin-1.5.20-1
   autoconf2.5-2.59-2
   automake1.9-1.9.6-1
   binutils-20050610-1
-  gawk-3.1.5-1
+  cygport-0.2.2-1
+  gawk-3.1.5-2
   gcc-core-3.4.4-1
-  libtool1.5-1.5.18-1
+  libtool1.5-1.5.22-1
   make-3.80-1
-  sed-4.1.4-1
-
-  GConf2-2.8.1-1
-  ORBit2-devel-2.12.3-1
-  atk-devel-1.9.1-1
-  cairo-1.0.0-1
-  dbus-0.36.1-1
-  dbus-glib-0.36.1-1
-  expat-1.95.8-1
-  gettext-0.14.1-1
-  glib2-devel-2.6.5-1
-  glitz-0.4.4-1
-  gnome-keyring-0.4.3-1
-  gnome-vfs2-2.8.4-1
-  gtk2-x11-devel-2.6.8-1
-  jpeg-6b-11
-  libXft-devel-2.1.6-1
-  libart_lgpl2-2.3.16-1
-  libaudiofile-devel-0.2.6-2
-  libbonobo2-devel-2.8.0-1
-  libbonoboui2-2.8.0-1
-  libesound-devel-0.2.36-1
-  libfontconfig-devel-2.2.2-1
-  libfreetype2-devel-2.1.5-1
-  libglade2-2.5.1-1
-  libgnome2-2.8.0-1
-  libgnomecanvas2-2.10.2-1
-  libgnomeprint22-2.10.3-1
-  libgnomeprintui22-2.10.2-1
-  libgnomeui2-2.8.1-1
-  libiconv-1.9.2-1
-  libpng12-devel-1.2.8-2
-  libtiff-devel-3.7.3-1
-  libxml2-devel-2.6.20-3
-  minires-devel-1.00-1
-  nautilus-2.8.2-1
-  pango-devel-1.8.1-1
-  poppler-0.4.1-1
-  poppler-glib-0.4.1-1
-  popt-1.6.4-4
-  t1lib-5.1.0-1
-  tetex-devel-3.0.0-3
-  xorg-x11-devel-6.8.2.0-1
-  zlib-1.2.3-1
+  pkg-config-0.20-1
+  scrollkeeper-0.3.14-2
+  sed-4.1.5-1
 
 Canonical website:
   http://www.gnome.org/projects/evince/
@@ -113,20 +46,22 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack evince-0.4.0-1-src.tar.bz2
+  unpack evince-0.4.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  ./evince-0.4.0-1.sh all
+  cygport ./evince-0.4.0-X.cygport all
 
 This will create:
-  /usr/src/evince-0.4.0-1-src.tar.bz2
-  /usr/src/evince-0.4.0-1.tar.bz2
+  /usr/src/evince-0.4.0-X-src.tar.bz2
+  /usr/src/evince-0.4.0-X.tar.bz2
+  /usr/src/nautilus-evince-0.4.0-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary package:
 
+  /etc/gconf/schemas/evince-thumbnailer-djvu.schemas
   /etc/gconf/schemas/evince-thumbnailer-dvi.schemas
   /etc/gconf/schemas/evince-thumbnailer.schemas
   /etc/gconf/schemas/evince.schemas
@@ -134,14 +69,11 @@ Files included in the binary package:
   /etc/preremove/evince.sh
   /usr/bin/evince-thumbnailer.exe
   /usr/bin/evince.exe
-  /usr/lib/nautilus/extensions-1.0/cygevince-properties-page.dll
-  /usr/lib/nautilus/extensions-1.0/libevince-properties-page.dll.a
-  /usr/lib/nautilus/extensions-1.0/libevince-properties-page.la
   /usr/share/applications/evince.desktop
   /usr/share/doc/Cygwin/evince-0.4.0.README
   /usr/share/doc/evince-0.4.0/AUTHORS
-  /usr/share/doc/evince-0.4.0/ChangeLog
   /usr/share/doc/evince-0.4.0/COPYING
+  /usr/share/doc/evince-0.4.0/ChangeLog
   /usr/share/doc/evince-0.4.0/INSTALL
   /usr/share/doc/evince-0.4.0/NEWS
   /usr/share/doc/evince-0.4.0/README
@@ -209,9 +141,17 @@ Files included in the binary package:
   /usr/share/omf/evince/evince-sr.omf
   /usr/share/omf/evince/evince-uk.omf
 
+Files included in the nautilus extension package:
+
+  /usr/lib/nautilus/extensions-1.0/cygevince-properties-page.dll
+  /usr/lib/nautilus/extensions-1.0/libevince-properties-page.la
+
 ------------------
 
 Port Notes:
+
+----- version 0.4.0-2 -----
+Rebuilt with support for D-BUS 0.6x and DjVu files.
 
 ----- version 0.4.0-1 -----
 Initial release for Cygwin.

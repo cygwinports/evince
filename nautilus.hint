@@ -1,6 +1,7 @@
-category: Gnome Text
-requires: cygwin GConf2 gnome-vfs2 libX11_6 libdbus-glib_1_2 libdjvulibre15 libglade2 libgnomeprint22 libgnomeprintui22 libgnomeui22 libkpathsea4 libtiff5 libpoppler-glib_0 t1lib
-sdesc: "GNOME multiple format document viewer"
+category: Gnome
+requires: cygwin GConf2 libX11_6 libdbus-glib_1_2 libdjvulibre15 libglade2 libgnome2 libkpathsea4 libtiff5 libpoppler-glib_0 nautilus t1lib
+external-source: evince
+sdesc: "GNOME Nautilus PDF properties extension"
 ldesc: "Evince is a document viewer for multiple document formats. It
 currently supports pdf, postscript, djvu, tiff and dvi. The goal of
 evince is to replace the multiple document viewers that exist on the
