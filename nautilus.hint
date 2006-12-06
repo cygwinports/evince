@@ -1,5 +1,5 @@
 category: Gnome
-requires: cygwin GConf2 libX11_6 libdbus-glib_1_2 libdjvulibre15 libglade2 libgnome2 libkpathsea4 libtiff5 libpoppler-glib_0 nautilus t1lib
+requires: cygwin GConf2 gtk2-x11 libX11_6 libdbus-glib_1_2 libdjvulibre15 libglade2 libgnome2 libkpathsea4 libtiff5 libpoppler-glib_0 nautilus t1lib
 external-source: evince
 sdesc: "GNOME Nautilus PDF properties extension"
 ldesc: "Evince is a document viewer for multiple document formats. It
