@@ -6,22 +6,29 @@ replace the multiple document viewers that exist on the GNOME Desktop
 with a single simple application.
 
 Runtime requirements:
-  cygwin-1.5.22-1
-  GConf2-2.16.0-1
-  atk-1.12.3-1
-  gnome-keyring-0.6.0-1
-  gtk2-x11-2.10.6-1
+  cygwin-1.5.24-2
+  GConf2-2.18.0.1-1
+  atk-1.18.0-1
+  gdk-pixbuf2-2.10.13-1
+  glib2-2.12.12-2
+  gnome-keyring-0.8.1-1
+  gnome-vfs2-2.18.1-1
+  gtk2-x11-2.10.13-1
   libX11_6-1.1.1-1
-  libdbus-glib_1_2-0.72-1
-  libdjvulibre15-3.5.17-1
-  libglade2-2.6.0-1
-  libgnome2-2.16.0-1
+  libcairo2-1.4.8-1
+  libdbus-glib_1_2-0.73-1
+  libdjvulibre15-3.5.18-1
+  libglade2-2.6.1-1
+  libgnome2-2.18.0-1
   libgnomeui2-2.16.1-1
+  libintl8-0.15-1
   libkpathsea4-3.0.0-3
-  libpoppler-glib_1-0.5.4-1
+  libpoppler-glib_1-0.5.4-2
   libtiff5-3.8.2-3
-  nautilus-2.16.3-1
-  t1lib-5.1.0-1
+  libxml2-2.6.28-2
+  pango-1.16.4-1
+  t1lib-5.1.1-1
+  zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding devel packages)
@@ -47,16 +54,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack evince-0.6.1-X-src.tar.bz2
+  unpack evince-0.8.3-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./evince-0.6.1-X.cygport all
+  cygport ./evince-0.8.3-X.cygport all
 
 This will create:
-  /usr/src/evince-0.6.1-X-src.tar.bz2
-  /usr/src/evince-0.6.1-X.tar.bz2
-  /usr/src/nautilus-evince-0.6.1-X.tar.bz2
+  /usr/src/evince-0.8.3-X-src.tar.bz2
+  /usr/src/evince-0.8.3-X.tar.bz2
+  /usr/src/nautilus-evince-0.8.3-X.tar.bz2
 
 -------------------------------------------
 
@@ -64,6 +71,7 @@ Files included in the binary package:
 
   /etc/gconf/schemas/evince-thumbnailer-djvu.schemas
   /etc/gconf/schemas/evince-thumbnailer-dvi.schemas
+  /etc/gconf/schemas/evince-thumbnailer-ps.schemas
   /etc/gconf/schemas/evince-thumbnailer.schemas
   /etc/gconf/schemas/evince.schemas
   /etc/postinstall/evince.sh
@@ -71,26 +79,44 @@ Files included in the binary package:
   /usr/bin/evince-thumbnailer.exe
   /usr/bin/evince.exe
   /usr/share/applications/evince.desktop
-  /usr/share/doc/Cygwin/evince-0.6.1.README
-  /usr/share/doc/evince-0.6.1/AUTHORS
-  /usr/share/doc/evince-0.6.1/COPYING
-  /usr/share/doc/evince-0.6.1/ChangeLog
-  /usr/share/doc/evince-0.6.1/INSTALL
-  /usr/share/doc/evince-0.6.1/NEWS
-  /usr/share/doc/evince-0.6.1/README
-  /usr/share/doc/evince-0.6.1/TODO
+  /usr/share/doc/Cygwin/evince-0.8.3.README
+  /usr/share/doc/evince-0.8.3/AUTHORS
+  /usr/share/doc/evince-0.8.3/COPYING
+  /usr/share/doc/evince-0.8.3/ChangeLog
+  /usr/share/doc/evince-0.8.3/INSTALL
+  /usr/share/doc/evince-0.8.3/MAINTAINERS
+  /usr/share/doc/evince-0.8.3/NEWS
+  /usr/share/doc/evince-0.8.3/README
+  /usr/share/doc/evince-0.8.3/TODO
   /usr/share/evince/evince-password.glade
+  /usr/share/evince/evince-preview-toolbar.xml
   /usr/share/evince/evince-properties.glade
   /usr/share/evince/evince-toolbar.xml
   /usr/share/evince/evince-ui.xml
   /usr/share/evince/hand-open.png
+  /usr/share/evince/icons/hicolor/16x16/actions/view-page-continuous.png
+  /usr/share/evince/icons/hicolor/16x16/actions/view-page-facing.png
+  /usr/share/evince/icons/hicolor/16x16/actions/zoom-fit-page.png
+  /usr/share/evince/icons/hicolor/16x16/actions/zoom-fit-width.png
+  /usr/share/evince/icons/hicolor/22x22/actions/view-page-continuous.png
+  /usr/share/evince/icons/hicolor/22x22/actions/view-page-facing.png
+  /usr/share/evince/icons/hicolor/22x22/actions/zoom-fit-page.png
+  /usr/share/evince/icons/hicolor/22x22/actions/zoom-fit-width.png
+  /usr/share/evince/icons/hicolor/24x24/actions/view-page-continuous.png
+  /usr/share/evince/icons/hicolor/24x24/actions/view-page-facing.png
+  /usr/share/evince/icons/hicolor/24x24/actions/zoom-fit-page.png
+  /usr/share/evince/icons/hicolor/24x24/actions/zoom-fit-width.png
   /usr/share/gnome/help/evince/C/evince.xml
   /usr/share/gnome/help/evince/C/figures/evince_start_window.png
   /usr/share/gnome/help/evince/C/legal.xml
   /usr/share/gnome/help/evince/bg/evince.xml
   /usr/share/gnome/help/evince/bg/figures/evince_start_window.png
+  /usr/share/gnome/help/evince/ca/evince.xml
+  /usr/share/gnome/help/evince/ca/figures/evince_start_window.png
   /usr/share/gnome/help/evince/el/evince.xml
   /usr/share/gnome/help/evince/el/figures/evince_start_window.png
+  /usr/share/gnome/help/evince/en_GB/evince.xml
+  /usr/share/gnome/help/evince/en_GB/figures/evince_start_window.png
   /usr/share/gnome/help/evince/es/evince.xml
   /usr/share/gnome/help/evince/es/figures/evince_start_window.png
   /usr/share/gnome/help/evince/fi/evince.xml
@@ -109,10 +135,74 @@ Files included in the binary package:
   /usr/share/gnome/help/evince/sv/figures/evince_start_window.png
   /usr/share/gnome/help/evince/uk/evince.xml
   /usr/share/gnome/help/evince/uk/figures/evince_start_window.png
+  /usr/share/gtk-doc/html/evince/EvAttachment.html
+  /usr/share/gtk-doc/html/evince/EvJobPrint.html
+  /usr/share/gtk-doc/html/evince/EvNavigationAction.html
+  /usr/share/gtk-doc/html/evince/EvNavigationActionWidget.html
+  /usr/share/gtk-doc/html/evince/EvPageAction.html
+  /usr/share/gtk-doc/html/evince/EvPageActionWidget.html
+  /usr/share/gtk-doc/html/evince/EvWindow.html
+  /usr/share/gtk-doc/html/evince/evince-EvHistory.html
+  /usr/share/gtk-doc/html/evince/evince-EvImage.html
+  /usr/share/gtk-doc/html/evince/evince-EvPasswordDialog.html
+  /usr/share/gtk-doc/html/evince/evince-EvPasswordView.html
+  /usr/share/gtk-doc/html/evince/evince-EvRenderContext.html
+  /usr/share/gtk-doc/html/evince/evince-EvSidebar.html
+  /usr/share/gtk-doc/html/evince/evince-EvSidebarAttachments.html
+  /usr/share/gtk-doc/html/evince/evince-EvSidebarLinks.html
+  /usr/share/gtk-doc/html/evince/evince-EvSidebarThumbnails.html
+  /usr/share/gtk-doc/html/evince/evince-EvTooltip.html
+  /usr/share/gtk-doc/html/evince/evince-ev-async-renderer.html
+  /usr/share/gtk-doc/html/evince/evince-ev-document-factory.html
+  /usr/share/gtk-doc/html/evince/evince-ev-document-find.html
+  /usr/share/gtk-doc/html/evince/evince-ev-document-fonts.html
+  /usr/share/gtk-doc/html/evince/evince-ev-document-images.html
+  /usr/share/gtk-doc/html/evince/evince-ev-document-info.html
+  /usr/share/gtk-doc/html/evince/evince-ev-document-links.html
+  /usr/share/gtk-doc/html/evince/evince-ev-document-misc.html
+  /usr/share/gtk-doc/html/evince/evince-ev-document-security.html
+  /usr/share/gtk-doc/html/evince/evince-ev-document-thumbnails.html
+  /usr/share/gtk-doc/html/evince/evince-ev-document-transition.html
+  /usr/share/gtk-doc/html/evince/evince-ev-document.html
+  /usr/share/gtk-doc/html/evince/evince-ev-file-exporter.html
+  /usr/share/gtk-doc/html/evince/evince-ev-file-helpers.html
+  /usr/share/gtk-doc/html/evince/evince-ev-job-queue.html
+  /usr/share/gtk-doc/html/evince/evince-ev-link-action.html
+  /usr/share/gtk-doc/html/evince/evince-ev-link-dest.html
+  /usr/share/gtk-doc/html/evince/evince-ev-link.html
+  /usr/share/gtk-doc/html/evince/evince-ev-metadata-manager.html
+  /usr/share/gtk-doc/html/evince/evince-ev-page-cache.html
+  /usr/share/gtk-doc/html/evince/evince-ev-pixbuf-cache.html
+  /usr/share/gtk-doc/html/evince/evince-ev-print-job.html
+  /usr/share/gtk-doc/html/evince/evince-ev-properties-dialog.html
+  /usr/share/gtk-doc/html/evince/evince-ev-properties-fonts.html
+  /usr/share/gtk-doc/html/evince/evince-ev-selection.html
+  /usr/share/gtk-doc/html/evince/evince-ev-sidebar-page.html
+  /usr/share/gtk-doc/html/evince/evince-ev-stock-icons.html
+  /usr/share/gtk-doc/html/evince/evince-ev-utils.html
+  /usr/share/gtk-doc/html/evince/evince-ev-view-accessible.html
+  /usr/share/gtk-doc/html/evince/evince-ev-view.html
+  /usr/share/gtk-doc/html/evince/evince-ev-window-title.html
+  /usr/share/gtk-doc/html/evince/evince.devhelp
+  /usr/share/gtk-doc/html/evince/evince.devhelp2
+  /usr/share/gtk-doc/html/evince/home.png
+  /usr/share/gtk-doc/html/evince/index.html
+  /usr/share/gtk-doc/html/evince/index.sgml
+  /usr/share/gtk-doc/html/evince/ix01.html
+  /usr/share/gtk-doc/html/evince/left.png
+  /usr/share/gtk-doc/html/evince/pt01.html
+  /usr/share/gtk-doc/html/evince/pt02.html
+  /usr/share/gtk-doc/html/evince/pt03.html
+  /usr/share/gtk-doc/html/evince/pt04.html
+  /usr/share/gtk-doc/html/evince/right.png
+  /usr/share/gtk-doc/html/evince/style.css
+  /usr/share/gtk-doc/html/evince/up.png
   /usr/share/icons/hicolor/16x16/apps/evince.png
   /usr/share/icons/hicolor/22x22/apps/evince.png
+  /usr/share/icons/hicolor/24x24/apps/evince.png
   /usr/share/icons/hicolor/48x48/apps/evince.png
   /usr/share/icons/hicolor/scalable/apps/evince.svg
+  /usr/share/locale/ar/LC_MESSAGES/evince.mo
   /usr/share/locale/be/LC_MESSAGES/evince.mo
   /usr/share/locale/bg/LC_MESSAGES/evince.mo
   /usr/share/locale/bn/LC_MESSAGES/evince.mo
@@ -146,6 +236,7 @@ Files included in the binary package:
   /usr/share/locale/ku/LC_MESSAGES/evince.mo
   /usr/share/locale/lt/LC_MESSAGES/evince.mo
   /usr/share/locale/lv/LC_MESSAGES/evince.mo
+  /usr/share/locale/mg/LC_MESSAGES/evince.mo
   /usr/share/locale/mk/LC_MESSAGES/evince.mo
   /usr/share/locale/ml/LC_MESSAGES/evince.mo
   /usr/share/locale/mr/LC_MESSAGES/evince.mo
@@ -153,6 +244,7 @@ Files included in the binary package:
   /usr/share/locale/ne/LC_MESSAGES/evince.mo
   /usr/share/locale/nl/LC_MESSAGES/evince.mo
   /usr/share/locale/nn/LC_MESSAGES/evince.mo
+  /usr/share/locale/oc/LC_MESSAGES/evince.mo
   /usr/share/locale/or/LC_MESSAGES/evince.mo
   /usr/share/locale/pa/LC_MESSAGES/evince.mo
   /usr/share/locale/pl/LC_MESSAGES/evince.mo
@@ -176,9 +268,12 @@ Files included in the binary package:
   /usr/share/locale/zh_CN/LC_MESSAGES/evince.mo
   /usr/share/locale/zh_HK/LC_MESSAGES/evince.mo
   /usr/share/locale/zh_TW/LC_MESSAGES/evince.mo
+  /usr/share/man/man1/evince.1.gz
   /usr/share/omf/evince/evince-C.omf
   /usr/share/omf/evince/evince-bg.omf
+  /usr/share/omf/evince/evince-ca.omf
   /usr/share/omf/evince/evince-el.omf
+  /usr/share/omf/evince/evince-en_GB.omf
   /usr/share/omf/evince/evince-es.omf
   /usr/share/omf/evince/evince-fi.omf
   /usr/share/omf/evince/evince-fr.omf
@@ -197,6 +292,9 @@ Files included in the nautilus extension package:
 ------------------
 
 Port Notes:
+
+----- version 0.8.3-1 -----
+Version bump for GNOME 2.18.
 
 ----- version 0.6.1-1 -----
 Version bump for GNOME 2.16.
