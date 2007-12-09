@@ -7,28 +7,30 @@ with a single simple application.
 
 Runtime requirements:
   cygwin-1.5.24-2
-  GConf2-2.18.0.1-1
-  atk-1.18.0-1
-  gdk-pixbuf2-2.10.13-1
-  glib2-2.12.12-2
-  gnome-keyring-0.8.1-1
-  gnome-vfs2-2.18.1-1
-  gtk2-x11-2.10.13-1
-  libX11_6-1.1.1-1
-  libcairo2-1.4.8-1
-  libdbus-glib_1_2-0.73-1
-  libdjvulibre15-3.5.18-1
-  libglade2-2.6.1-1
-  libgnome2-2.18.0-1
-  libgnomeui2-2.16.1-1
+  GConf2-2.20.1-1
+  atk-1.20.0-1
+  gdk-pixbuf2-2.12.2-1
+  glib2-2.14.4-1
+  gnome-keyring-2.20.2-1
+  gnome-vfs2-2.20.1-1
+  gtk2-x11-2.12.2-1
+  libX11_6-1.1.3-1
+  libcairo2-1.4.12-1
+  libdbus-glib_1_2-0.74-1
+  libdjvulibre15-3.5.19-1
+  libglade2-2.6.2-1
+  libgnome2-2.20.1.1-1
+  libgnomeui2-2.20.1.1-1
   libintl8-0.15-1
   libkpathsea4-3.0.0-3
-  libpoppler-glib_1-0.5.4-2
+  libpoppler-glib_2-0.6.2-1
   libtiff5-3.8.2-3
-  libxml2-2.6.28-2
-  pango-1.16.4-1
+  libxml2-2.6.30-1
+  pango-1.18.3-1
   t1lib-5.1.1-1
   zlib-1.2.3-2
+(nautilus-evince)
+  nautilus-2.20.0-1
 
 Build requirements:
 (besides corresponding devel packages)
@@ -54,21 +56,23 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack evince-0.8.3-X-src.tar.bz2
+  unpack evince-2.20.2-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./evince-0.8.3-X.cygport all
+  cygport ./evince-2.20.2-X.cygport all
 
 This will create:
-  /usr/src/evince-0.8.3-X-src.tar.bz2
-  /usr/src/evince-0.8.3-X.tar.bz2
-  /usr/src/nautilus-evince-0.8.3-X.tar.bz2
+  /usr/src/evince-2.20.2-X-src.tar.bz2
+  /usr/src/evince-2.20.2-X.tar.bz2
+  /usr/src/nautilus-evince-2.20.2-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
+Files included in the binary packages:
 
+(evince)
+  /etc/gconf/schemas/evince-thumbnailer-comics.schemas
   /etc/gconf/schemas/evince-thumbnailer-djvu.schemas
   /etc/gconf/schemas/evince-thumbnailer-dvi.schemas
   /etc/gconf/schemas/evince-thumbnailer-ps.schemas
@@ -79,17 +83,16 @@ Files included in the binary package:
   /usr/bin/evince-thumbnailer.exe
   /usr/bin/evince.exe
   /usr/share/applications/evince.desktop
-  /usr/share/doc/Cygwin/evince-0.8.3.README
-  /usr/share/doc/evince-0.8.3/AUTHORS
-  /usr/share/doc/evince-0.8.3/COPYING
-  /usr/share/doc/evince-0.8.3/ChangeLog
-  /usr/share/doc/evince-0.8.3/INSTALL
-  /usr/share/doc/evince-0.8.3/MAINTAINERS
-  /usr/share/doc/evince-0.8.3/NEWS
-  /usr/share/doc/evince-0.8.3/README
-  /usr/share/doc/evince-0.8.3/TODO
+  /usr/share/doc/Cygwin/evince-2.20.2.README
+  /usr/share/doc/evince-2.20.2/AUTHORS
+  /usr/share/doc/evince-2.20.2/COPYING
+  /usr/share/doc/evince-2.20.2/ChangeLog
+  /usr/share/doc/evince-2.20.2/INSTALL
+  /usr/share/doc/evince-2.20.2/MAINTAINERS
+  /usr/share/doc/evince-2.20.2/NEWS
+  /usr/share/doc/evince-2.20.2/README
+  /usr/share/doc/evince-2.20.2/TODO
   /usr/share/evince/evince-password.glade
-  /usr/share/evince/evince-preview-toolbar.xml
   /usr/share/evince/evince-properties.glade
   /usr/share/evince/evince-toolbar.xml
   /usr/share/evince/evince-ui.xml
@@ -98,14 +101,21 @@ Files included in the binary package:
   /usr/share/evince/icons/hicolor/16x16/actions/view-page-facing.png
   /usr/share/evince/icons/hicolor/16x16/actions/zoom-fit-page.png
   /usr/share/evince/icons/hicolor/16x16/actions/zoom-fit-width.png
+  /usr/share/evince/icons/hicolor/16x16/actions/zoom.png
   /usr/share/evince/icons/hicolor/22x22/actions/view-page-continuous.png
   /usr/share/evince/icons/hicolor/22x22/actions/view-page-facing.png
   /usr/share/evince/icons/hicolor/22x22/actions/zoom-fit-page.png
   /usr/share/evince/icons/hicolor/22x22/actions/zoom-fit-width.png
+  /usr/share/evince/icons/hicolor/22x22/actions/zoom.png
   /usr/share/evince/icons/hicolor/24x24/actions/view-page-continuous.png
   /usr/share/evince/icons/hicolor/24x24/actions/view-page-facing.png
   /usr/share/evince/icons/hicolor/24x24/actions/zoom-fit-page.png
   /usr/share/evince/icons/hicolor/24x24/actions/zoom-fit-width.png
+  /usr/share/evince/icons/hicolor/24x24/actions/zoom.png
+  /usr/share/evince/icons/hicolor/32x32/actions/view-page-continuous.png
+  /usr/share/evince/icons/hicolor/32x32/actions/view-page-facing.png
+  /usr/share/evince/icons/hicolor/48x48/actions/view-page-continuous.png
+  /usr/share/evince/icons/hicolor/48x48/actions/view-page-facing.png
   /usr/share/gnome/help/evince/C/evince.xml
   /usr/share/gnome/help/evince/C/figures/evince_start_window.png
   /usr/share/gnome/help/evince/C/legal.xml
@@ -125,8 +135,14 @@ Files included in the binary package:
   /usr/share/gnome/help/evince/fr/figures/evince_start_window.png
   /usr/share/gnome/help/evince/it/evince.xml
   /usr/share/gnome/help/evince/it/figures/evince_start_window.png
+  /usr/share/gnome/help/evince/ja/evince.xml
+  /usr/share/gnome/help/evince/ja/figures/evince_start_window.png
   /usr/share/gnome/help/evince/nl/evince.xml
   /usr/share/gnome/help/evince/nl/figures/evince_start_window.png
+  /usr/share/gnome/help/evince/oc/evince.xml
+  /usr/share/gnome/help/evince/oc/figures/evince_start_window.png
+  /usr/share/gnome/help/evince/pt_BR/evince.xml
+  /usr/share/gnome/help/evince/pt_BR/figures/evince_start_window.png
   /usr/share/gnome/help/evince/ru/evince.xml
   /usr/share/gnome/help/evince/ru/figures/evince_start_window.png
   /usr/share/gnome/help/evince/sr/evince.xml
@@ -204,6 +220,7 @@ Files included in the binary package:
   /usr/share/icons/hicolor/scalable/apps/evince.svg
   /usr/share/locale/ar/LC_MESSAGES/evince.mo
   /usr/share/locale/be/LC_MESSAGES/evince.mo
+  /usr/share/locale/be@latin/LC_MESSAGES/evince.mo
   /usr/share/locale/bg/LC_MESSAGES/evince.mo
   /usr/share/locale/bn/LC_MESSAGES/evince.mo
   /usr/share/locale/bn_IN/LC_MESSAGES/evince.mo
@@ -260,6 +277,7 @@ Files included in the binary package:
   /usr/share/locale/sr@Latn/LC_MESSAGES/evince.mo
   /usr/share/locale/sv/LC_MESSAGES/evince.mo
   /usr/share/locale/ta/LC_MESSAGES/evince.mo
+  /usr/share/locale/te/LC_MESSAGES/evince.mo
   /usr/share/locale/th/LC_MESSAGES/evince.mo
   /usr/share/locale/tr/LC_MESSAGES/evince.mo
   /usr/share/locale/uk/LC_MESSAGES/evince.mo
@@ -278,20 +296,25 @@ Files included in the binary package:
   /usr/share/omf/evince/evince-fi.omf
   /usr/share/omf/evince/evince-fr.omf
   /usr/share/omf/evince/evince-it.omf
+  /usr/share/omf/evince/evince-ja.omf
   /usr/share/omf/evince/evince-nl.omf
+  /usr/share/omf/evince/evince-oc.omf
+  /usr/share/omf/evince/evince-pt_BR.omf
   /usr/share/omf/evince/evince-ru.omf
   /usr/share/omf/evince/evince-sr.omf
   /usr/share/omf/evince/evince-sv.omf
   /usr/share/omf/evince/evince-uk.omf
 
-Files included in the nautilus extension package:
-
+(nautilus-evince)
   /usr/lib/nautilus/extensions-1.0/cygevince-properties-page.dll
   /usr/lib/nautilus/extensions-1.0/libevince-properties-page.la
 
 ------------------
 
 Port Notes:
+
+----- version 2.20.2-1 -----
+Version bump for GNOME 2.20.
 
 ----- version 0.8.3-1 -----
 Version bump for GNOME 2.18.
