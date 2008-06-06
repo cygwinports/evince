@@ -6,45 +6,46 @@ replace the multiple document viewers that exist on the GNOME Desktop
 with a single simple application.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  GConf2-2.20.1-1
-  atk-1.20.0-1
-  gdk-pixbuf2-2.12.2-1
-  glib2-2.14.4-1
-  gnome-keyring-2.20.2-1
-  gnome-vfs2-2.20.1-1
-  gtk2-x11-2.12.2-1
+  cygwin-1.5.25-11
+  GConf2-2.22.0-1
+  atk-1.22.0-1
+  gdk-pixbuf2-2.12.9-1
+  glib2-2.16.3-1
+  gnome-keyring-2.22.2-1
+  gtk2-x11-2.12.9-1
   libX11_6-1.1.3-1
-  libcairo2-1.4.12-1
+  libcairo2-1.6.4-1
   libdbus-glib_1_2-0.74-1
-  libdjvulibre15-3.5.19-1
+  libdjvulibre15-3.5.20-2
   libglade2-2.6.2-1
-  libgnome2-2.20.1.1-1
-  libgnomeui2-2.20.1.1-1
+  libgnome2-2.22.0-1
+  libgnomeui2-2.22.1-1
   libintl8-0.15-1
   libkpathsea4-3.0.0-3
-  libpoppler-glib_2-0.6.2-1
+  libpoppler-glib_3-0.8.2-1
   libtiff5-3.8.2-3
-  libxml2-2.6.30-1
-  pango-1.18.3-1
-  t1lib-5.1.1-1
+  libxml2-2.6.32-1
+  pango-1.20.3-1
+  t1lib5-5.1.2-1
   zlib-1.2.3-2
 (nautilus-evince)
-  nautilus-2.20.0-1
+  nautilus-2.22.2-1
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.22-1
-  autoconf2.5-2.60-1
-  automake1.9-1.9.6-1
-  binutils-20060817-1
-  cygport-0.2.7-1
-  gawk-3.1.5-2
+  autoconf2.5-2.61-1
+  automake1.10-1.10.1-1
+  binutils-20080523-1
+  cygport-0.3.11-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-1
-  libtool1.5-1.5.23a-1
+  gnome-common-2.20.0-2
+  gnome-doc-utils-0.12.2-1
+  gtk-doc-1.10-1
+  libtool-2.2.2-2
   make-3.81-1
   pkg-config-0.21-1
-  scrollkeeper-0.3.14-2
+  rarian-0.8.0-1
   sed-4.1.5-2
 
 Canonical website:
@@ -56,16 +57,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack evince-2.20.2-X-src.tar.bz2
+  unpack evince-2.22.2-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./evince-2.20.2-X.cygport all
+  cygport ./evince-2.22.2-X.cygport all
 
 This will create:
-  /usr/src/evince-2.20.2-X-src.tar.bz2
-  /usr/src/evince-2.20.2-X.tar.bz2
-  /usr/src/nautilus-evince-2.20.2-X.tar.bz2
+  /usr/src/evince-2.22.2-X-src.tar.bz2
+  /usr/src/evince-2.22.2-X.tar.bz2
+  /usr/src/nautilus-evince-2.22.2-X.tar.bz2
 
 -------------------------------------------
 
@@ -80,18 +81,67 @@ Files included in the binary packages:
   /etc/gconf/schemas/evince.schemas
   /etc/postinstall/evince.sh
   /etc/preremove/evince.sh
+  /usr/bin/cygevbackend-0.dll
   /usr/bin/evince-thumbnailer.exe
   /usr/bin/evince.exe
+  /usr/include/evince-2.20/evince/ev-async-renderer.h
+  /usr/include/evince-2.20/evince/ev-attachment.h
+  /usr/include/evince-2.20/evince/ev-document-find.h
+  /usr/include/evince-2.20/evince/ev-document-fonts.h
+  /usr/include/evince-2.20/evince/ev-document-forms.h
+  /usr/include/evince-2.20/evince/ev-document-images.h
+  /usr/include/evince-2.20/evince/ev-document-info.h
+  /usr/include/evince-2.20/evince/ev-document-links.h
+  /usr/include/evince-2.20/evince/ev-document-misc.h
+  /usr/include/evince-2.20/evince/ev-document-security.h
+  /usr/include/evince-2.20/evince/ev-document-thumbnails.h
+  /usr/include/evince-2.20/evince/ev-document-transition.h
+  /usr/include/evince-2.20/evince/ev-document.h
+  /usr/include/evince-2.20/evince/ev-file-exporter.h
+  /usr/include/evince-2.20/evince/ev-file-helpers.h
+  /usr/include/evince-2.20/evince/ev-form-field.h
+  /usr/include/evince-2.20/evince/ev-image.h
+  /usr/include/evince-2.20/evince/ev-link-action.h
+  /usr/include/evince-2.20/evince/ev-link-dest.h
+  /usr/include/evince-2.20/evince/ev-link.h
+  /usr/include/evince-2.20/evince/ev-render-context.h
+  /usr/include/evince-2.20/evince/ev-selection.h
+  /usr/include/evince-2.20/evince/ev-transition-effect.h
+  /usr/lib/evince/backends/comicsdocument.evince-backend
+  /usr/lib/evince/backends/cygcomicsdocument.dll
+  /usr/lib/evince/backends/cygdjvudocument.dll
+  /usr/lib/evince/backends/cygdvidocument.dll
+  /usr/lib/evince/backends/cygimpressdocument.dll
+  /usr/lib/evince/backends/cygpdfdocument.dll
+  /usr/lib/evince/backends/cygpixbufdocument.dll
+  /usr/lib/evince/backends/cygpsdocument.dll
+  /usr/lib/evince/backends/cygtiffdocument.dll
+  /usr/lib/evince/backends/djvudocument.evince-backend
+  /usr/lib/evince/backends/dvidocument.evince-backend
+  /usr/lib/evince/backends/impressdocument.evince-backend
+  /usr/lib/evince/backends/libcomicsdocument.la
+  /usr/lib/evince/backends/libdjvudocument.la
+  /usr/lib/evince/backends/libdvidocument.la
+  /usr/lib/evince/backends/libimpressdocument.la
+  /usr/lib/evince/backends/libpdfdocument.la
+  /usr/lib/evince/backends/libpixbufdocument.la
+  /usr/lib/evince/backends/libpsdocument.la
+  /usr/lib/evince/backends/libtiffdocument.la
+  /usr/lib/evince/backends/pdfdocument.evince-backend
+  /usr/lib/evince/backends/pixbufdocument.evince-backend
+  /usr/lib/evince/backends/psdocument.evince-backend
+  /usr/lib/evince/backends/tiffdocument.evince-backend
+  /usr/lib/libevbackend.dll.a
+  /usr/lib/libevbackend.la
   /usr/share/applications/evince.desktop
-  /usr/share/doc/Cygwin/evince-2.20.2.README
-  /usr/share/doc/evince-2.20.2/AUTHORS
-  /usr/share/doc/evince-2.20.2/COPYING
-  /usr/share/doc/evince-2.20.2/ChangeLog
-  /usr/share/doc/evince-2.20.2/INSTALL
-  /usr/share/doc/evince-2.20.2/MAINTAINERS
-  /usr/share/doc/evince-2.20.2/NEWS
-  /usr/share/doc/evince-2.20.2/README
-  /usr/share/doc/evince-2.20.2/TODO
+  /usr/share/doc/evince-2.22.2/AUTHORS
+  /usr/share/doc/evince-2.22.2/COPYING
+  /usr/share/doc/evince-2.22.2/ChangeLog
+  /usr/share/doc/evince-2.22.2/INSTALL
+  /usr/share/doc/evince-2.22.2/MAINTAINERS
+  /usr/share/doc/evince-2.22.2/NEWS
+  /usr/share/doc/evince-2.22.2/README
+  /usr/share/doc/evince-2.22.2/TODO
   /usr/share/evince/evince-password.glade
   /usr/share/evince/evince-properties.glade
   /usr/share/evince/evince-toolbar.xml
@@ -151,6 +201,8 @@ Files included in the binary packages:
   /usr/share/gnome/help/evince/sv/figures/evince_start_window.png
   /usr/share/gnome/help/evince/uk/evince.xml
   /usr/share/gnome/help/evince/uk/figures/evince_start_window.png
+  /usr/share/gnome/help/evince/zh_CN/evince.xml
+  /usr/share/gnome/help/evince/zh_CN/figures/evince_start_window.png
   /usr/share/gtk-doc/html/evince/EvAttachment.html
   /usr/share/gtk-doc/html/evince/EvJobPrint.html
   /usr/share/gtk-doc/html/evince/EvNavigationAction.html
@@ -189,7 +241,6 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/evince/evince-ev-metadata-manager.html
   /usr/share/gtk-doc/html/evince/evince-ev-page-cache.html
   /usr/share/gtk-doc/html/evince/evince-ev-pixbuf-cache.html
-  /usr/share/gtk-doc/html/evince/evince-ev-print-job.html
   /usr/share/gtk-doc/html/evince/evince-ev-properties-dialog.html
   /usr/share/gtk-doc/html/evince/evince-ev-properties-fonts.html
   /usr/share/gtk-doc/html/evince/evince-ev-selection.html
@@ -219,6 +270,7 @@ Files included in the binary packages:
   /usr/share/icons/hicolor/48x48/apps/evince.png
   /usr/share/icons/hicolor/scalable/apps/evince.svg
   /usr/share/locale/ar/LC_MESSAGES/evince.mo
+  /usr/share/locale/as/LC_MESSAGES/evince.mo
   /usr/share/locale/be/LC_MESSAGES/evince.mo
   /usr/share/locale/be@latin/LC_MESSAGES/evince.mo
   /usr/share/locale/bg/LC_MESSAGES/evince.mo
@@ -240,6 +292,7 @@ Files included in the binary packages:
   /usr/share/locale/fa/LC_MESSAGES/evince.mo
   /usr/share/locale/fi/LC_MESSAGES/evince.mo
   /usr/share/locale/fr/LC_MESSAGES/evince.mo
+  /usr/share/locale/ga/LC_MESSAGES/evince.mo
   /usr/share/locale/gl/LC_MESSAGES/evince.mo
   /usr/share/locale/gu/LC_MESSAGES/evince.mo
   /usr/share/locale/he/LC_MESSAGES/evince.mo
@@ -249,6 +302,7 @@ Files included in the binary packages:
   /usr/share/locale/it/LC_MESSAGES/evince.mo
   /usr/share/locale/ja/LC_MESSAGES/evince.mo
   /usr/share/locale/ka/LC_MESSAGES/evince.mo
+  /usr/share/locale/kn/LC_MESSAGES/evince.mo
   /usr/share/locale/ko/LC_MESSAGES/evince.mo
   /usr/share/locale/ku/LC_MESSAGES/evince.mo
   /usr/share/locale/lt/LC_MESSAGES/evince.mo
@@ -270,6 +324,7 @@ Files included in the binary packages:
   /usr/share/locale/ro/LC_MESSAGES/evince.mo
   /usr/share/locale/ru/LC_MESSAGES/evince.mo
   /usr/share/locale/rw/LC_MESSAGES/evince.mo
+  /usr/share/locale/si/LC_MESSAGES/evince.mo
   /usr/share/locale/sk/LC_MESSAGES/evince.mo
   /usr/share/locale/sl/LC_MESSAGES/evince.mo
   /usr/share/locale/sq/LC_MESSAGES/evince.mo
@@ -304,14 +359,18 @@ Files included in the binary packages:
   /usr/share/omf/evince/evince-sr.omf
   /usr/share/omf/evince/evince-sv.omf
   /usr/share/omf/evince/evince-uk.omf
+  /usr/share/omf/evince/evince-zh_CN.omf
 
 (nautilus-evince)
-  /usr/lib/nautilus/extensions-1.0/cygevince-properties-page.dll
-  /usr/lib/nautilus/extensions-1.0/libevince-properties-page.la
+  /usr/lib/nautilus/extensions-2.0/cygevince-properties-page.dll
+  /usr/lib/nautilus/extensions-2.0/libevince-properties-page.la
 
 ------------------
 
 Port Notes:
+
+----- version 2.22.2-1 -----
+Version bump for GNOME 2.22.
 
 ----- version 2.20.2-1 -----
 Version bump for GNOME 2.20.
