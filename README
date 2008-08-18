@@ -6,26 +6,27 @@ replace the multiple document viewers that exist on the GNOME Desktop
 with a single simple application.
 
 Runtime requirements:
-  cygwin-1.5.25-11
-  GConf2-2.22.0-1
+  cygwin-1.5.25-15
   atk-1.22.0-1
-  gdk-pixbuf2-2.12.9-1
-  glib2-2.16.3-1
+  GConf2-2.22.0-1
+  gdk-pixbuf2-2.12.11-1
+  glib2-2.16.4-1
   gnome-keyring-2.22.2-1
-  gtk2-x11-2.12.9-1
+  gtk2-x11-2.12.11-1
   libX11_6-1.1.3-1
   libcairo2-1.6.4-1
-  libdbus-glib_1_2-0.74-1
+  libdbus-glib_1_2-0.76-1
   libdjvulibre15-3.5.20-2
   libglade2-2.6.2-1
   libgnome2-2.22.0-1
   libgnomeui2-2.22.1-1
   libintl8-0.15-1
   libkpathsea4-3.0.0-3
-  libpoppler-glib_3-0.8.2-1
+  libpoppler-glib_3-0.8.4-1
+  libspectre1-0.2.1-1
   libtiff5-3.8.2-3
   libxml2-2.6.32-1
-  pango-1.20.3-1
+  pango-1.20.5-1
   t1lib5-5.1.2-1
   zlib-1.2.3-2
 (nautilus-evince)
@@ -35,8 +36,8 @@ Build requirements:
 (besides corresponding devel packages)
   autoconf2.5-2.61-1
   automake1.10-1.10.1-1
-  binutils-20080523-1
-  cygport-0.3.11-1
+  binutils-20080524-2
+  cygport-0.3.12-1
   gawk-3.1.6-1
   gcc-core-3.4.4-1
   gnome-common-2.20.0-2
@@ -44,7 +45,7 @@ Build requirements:
   gtk-doc-1.10-1
   libtool-2.2.2-2
   make-3.81-1
-  pkg-config-0.21-1
+  pkg-config-0.23a-2
   rarian-0.8.0-1
   sed-4.1.5-2
 
@@ -368,6 +369,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 2.22.2-2 -----
+Use libspectre for PostScript instead of gs-x11.
 
 ----- version 2.22.2-1 -----
 Version bump for GNOME 2.22.
