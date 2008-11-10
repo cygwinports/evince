@@ -3,6 +3,7 @@ inherit gnome2
 DESCRIPTION="GNOME document viewer"
 HOMEPAGE="http://www.gnome.org/projects/evince/"
 PATCH_URI="2.22.2-no-undefined.patch"
+PATCH_URI+=" 2.24.1-mdvi_warning.patch"
 
 CYGCONF_ARGS="
 	--enable-comics
