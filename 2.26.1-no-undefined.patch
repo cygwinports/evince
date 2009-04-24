@@ -1,0 +1,31 @@
+--- origsrc/evince-2.26.1/configure.ac	2009-04-15 15:17:16.000000000 -0500
++++ src/evince-2.26.1/configure.ac	2009-04-23 15:09:03.655625000 -0500
+@@ -132,7 +132,7 @@ fi
+ AC_SUBST(SMCLIENT_CFLAGS)
+ AC_SUBST(SMCLIENT_LIBS)
+ 
+-BACKEND_LIBTOOL_FLAGS="-module -avoid-version -export-symbols \$(top_srcdir)/backend/backend.symbols"
++BACKEND_LIBTOOL_FLAGS="-module -avoid-version -no-undefined -export-symbols \$(top_srcdir)/backend/backend.symbols"
+ AC_SUBST(BACKEND_LIBTOOL_FLAGS)
+ 
+ dnl ===== Check special functions
+--- origsrc/evince-2.26.1/libdocument/Makefile.am	2009-04-15 15:11:02.000000000 -0500
++++ src/evince-2.26.1/libdocument/Makefile.am	2009-04-23 15:11:13.874375000 -0500
+@@ -91,6 +91,7 @@ libevdocument_la_CFLAGS = \
+ 
+ libevdocument_la_LDFLAGS = \
+ 	-version-info $(EV_DOCUMENT_LT_VERSION_INFO)	\
++	-no-undefined	\
+ 	-export-symbols-regex "^ev_*"	\
+ 	$(AM_LDFLAGS)
+ 
+--- origsrc/evince-2.26.1/libview/Makefile.am	2009-04-15 15:11:01.000000000 -0500
++++ src/evince-2.26.1/libview/Makefile.am	2009-04-23 15:11:28.811875000 -0500
+@@ -49,6 +49,7 @@ libevview_la_CFLAGS = \
+ 
+ libevview_la_LDFLAGS = \
+ 	-version-info $(EV_VIEW_LT_VERSION_INFO)	\
++	-no-undefined	\
+ 	-export-symbols-regex "^ev_*"	\
+ 	$(AM_LDFLAGS)
+ 

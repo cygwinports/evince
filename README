@@ -6,48 +6,48 @@ replace the multiple document viewers that exist on the GNOME Desktop
 with a single simple application.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libatk1.0_0-1.24.0-1
-  libcairo2-1.8.4-1
-  libdbus-glib_1_2-0.76-1
-  libdjvulibre21-3.5.21-1
-  libgconf2_4-2.24.0-1
-  libgdk_pixbuf2.0_0-2.14.5-1
-  libglade2.0_0-2.6.3-2
-  libglib2.0_0-2.18.3-1
-  libgnome-keyring0-2.24.1-1
-  libgtk2.0_0-2.14.5-1
-  libICE6-1.0.4-2
-  libintl8-0.17-2
+  cygwin-1.7.0-45
+  libatk1.0_0-1.26.0-1
+  libcairo2-1.8.6-10
+  libdbus-glib_1_2-0.80-10
+  libdjvulibre21-3.5.21-10
+  libgcc1-4.3.2-2
+  libgconf2_4-2.26.0-1
+  libgdk_pixbuf2.0_0-2.16.0-1
+  libglib2.0_0-2.20.0-1
+  libgnome-keyring0-2.26.0-1
+  libgtk2.0_0-2.16.0-1
+  libICE6-1.0.5-10
+  libintl8-0.17-10
   libkpathsea4-3.0.0-3
-  libpango1.0_0-1.22.3-1
-  libpoppler-glib_4-0.10.1-1
-  libSM6-1.1.0-1
-  libspectre1-0.2.2-1
-  libtiff5-3.8.2-3
-  libX11_6-1.1.5-1
-  libxml2-2.6.32-2
-  t1lib5-5.1.2-1
-  zlib-1.2.3-2
+  libpango1.0_0-1.24.0-1
+  libpoppler-glib_4-0.10.5-1
+  libSM6-1.1.0-10
+  libspectre1-0.2.2-10
+  libstdc++6-4.3.2-2
+  libtiff5-3.8.2-10
+  libX11_6-1.2-10
+  libxml2-2.7.3-10
+  zlib0-1.2.3-10
 (nautilus-evince)
-  nautilus-2.24.2-1
+  nautilus-2.26.1-1
 
 Build requirements:
 (besides corresponding devel packages)
-  autoconf2.5-2.63-1
-  automake1.10-1.10.1-2
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
   binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-1
-  gnome-common-2.24.0-1
-  gnome-doc-utils-0.14.0-1
-  gtk-doc-1.11-1
-  intltool-0.40.5-1
-  libtool-2.2.6a-1
-  make-3.81-1
-  pkg-config-0.23a-2
-  rarian-0.8.1-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gnome-common-2.26.0-1
+  gnome-doc-utils-0.16.0-1
+  gtk-doc-1.11-2
+  intltool-0.40.6-1
+  libtool-2.2.7a-12
+  make-3.81-2
+  pkg-config-0.23b-10
+  rarian-0.8.1-10
   sed-4.1.5-2
 
 Canonical website:
@@ -59,16 +59,20 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack evince-2.24.2-X-src.tar.bz2
+  unpack evince-2.26.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./evince-2.24.2-X.cygport all
+  cygport ./evince-2.26.1-X.cygport all
 
 This will create:
-  /usr/src/evince-2.24.2-X-src.tar.bz2
-  /usr/src/evince-2.24.2-X.tar.bz2
-  /usr/src/nautilus-evince-2.24.2-X.tar.bz2
+  /usr/src/evince-2.26.1-X-src.tar.bz2
+  /usr/src/evince-2.26.1-X.tar.bz2
+  /usr/src/libevdocument-devel-2.26.1-X.tar.bz2
+  /usr/src/libevdocument1-2.26.1-X.tar.bz2
+  /usr/src/libevview-devel-2.26.1-X.tar.bz2
+  /usr/src/libevview1-2.26.1-X.tar.bz2
+  /usr/src/nautilus-evince-2.26.1-X.tar.bz2
 
 -------------------------------------------
 
@@ -83,70 +87,16 @@ Files included in the binary packages:
   /etc/gconf/schemas/evince.schemas
   /etc/postinstall/evince.sh
   /etc/preremove/evince.sh
-  /usr/bin/cygevbackend-0.dll
   /usr/bin/evince-thumbnailer.exe
   /usr/bin/evince.exe
-  /usr/include/evince-2.20/evince/ev-async-renderer.h
-  /usr/include/evince-2.20/evince/ev-attachment.h
-  /usr/include/evince-2.20/evince/ev-document-find.h
-  /usr/include/evince-2.20/evince/ev-document-fonts.h
-  /usr/include/evince-2.20/evince/ev-document-forms.h
-  /usr/include/evince-2.20/evince/ev-document-images.h
-  /usr/include/evince-2.20/evince/ev-document-info.h
-  /usr/include/evince-2.20/evince/ev-document-links.h
-  /usr/include/evince-2.20/evince/ev-document-misc.h
-  /usr/include/evince-2.20/evince/ev-document-security.h
-  /usr/include/evince-2.20/evince/ev-document-thumbnails.h
-  /usr/include/evince-2.20/evince/ev-document-transition.h
-  /usr/include/evince-2.20/evince/ev-document.h
-  /usr/include/evince-2.20/evince/ev-file-exporter.h
-  /usr/include/evince-2.20/evince/ev-file-helpers.h
-  /usr/include/evince-2.20/evince/ev-form-field.h
-  /usr/include/evince-2.20/evince/ev-image.h
-  /usr/include/evince-2.20/evince/ev-link-action.h
-  /usr/include/evince-2.20/evince/ev-link-dest.h
-  /usr/include/evince-2.20/evince/ev-link.h
-  /usr/include/evince-2.20/evince/ev-page.h
-  /usr/include/evince-2.20/evince/ev-render-context.h
-  /usr/include/evince-2.20/evince/ev-selection.h
-  /usr/include/evince-2.20/evince/ev-transition-effect.h
-  /usr/lib/evince/backends/comicsdocument.evince-backend
-  /usr/lib/evince/backends/cygcomicsdocument.dll
-  /usr/lib/evince/backends/cygdjvudocument.dll
-  /usr/lib/evince/backends/cygdvidocument.dll
-  /usr/lib/evince/backends/cygimpressdocument.dll
-  /usr/lib/evince/backends/cygpdfdocument.dll
-  /usr/lib/evince/backends/cygpixbufdocument.dll
-  /usr/lib/evince/backends/cygpsdocument.dll
-  /usr/lib/evince/backends/cygtiffdocument.dll
-  /usr/lib/evince/backends/djvudocument.evince-backend
-  /usr/lib/evince/backends/dvidocument.evince-backend
-  /usr/lib/evince/backends/impressdocument.evince-backend
-  /usr/lib/evince/backends/libcomicsdocument.la
-  /usr/lib/evince/backends/libdjvudocument.la
-  /usr/lib/evince/backends/libdvidocument.la
-  /usr/lib/evince/backends/libimpressdocument.la
-  /usr/lib/evince/backends/libpdfdocument.la
-  /usr/lib/evince/backends/libpixbufdocument.la
-  /usr/lib/evince/backends/libpsdocument.la
-  /usr/lib/evince/backends/libtiffdocument.la
-  /usr/lib/evince/backends/pdfdocument.evince-backend
-  /usr/lib/evince/backends/pixbufdocument.evince-backend
-  /usr/lib/evince/backends/psdocument.evince-backend
-  /usr/lib/evince/backends/tiffdocument.evince-backend
-  /usr/lib/libevbackend.dll.a
-  /usr/lib/libevbackend.la
   /usr/share/applications/evince.desktop
-  /usr/share/doc/evince-2.24.2/AUTHORS
-  /usr/share/doc/evince-2.24.2/COPYING
-  /usr/share/doc/evince-2.24.2/ChangeLog
-  /usr/share/doc/evince-2.24.2/INSTALL
-  /usr/share/doc/evince-2.24.2/MAINTAINERS
-  /usr/share/doc/evince-2.24.2/NEWS
-  /usr/share/doc/evince-2.24.2/README
-  /usr/share/doc/evince-2.24.2/TODO
-  /usr/share/evince/evince-password.glade
-  /usr/share/evince/evince-properties.glade
+  /usr/share/doc/evince/AUTHORS
+  /usr/share/doc/evince/COPYING
+  /usr/share/doc/evince/ChangeLog
+  /usr/share/doc/evince/MAINTAINERS
+  /usr/share/doc/evince/NEWS
+  /usr/share/doc/evince/README
+  /usr/share/doc/evince/TODO
   /usr/share/evince/evince-toolbar.xml
   /usr/share/evince/evince-ui.xml
   /usr/share/evince/hand-open.png
@@ -155,6 +105,7 @@ Files included in the binary packages:
   /usr/share/evince/icons/hicolor/16x16/actions/zoom-fit-page.png
   /usr/share/evince/icons/hicolor/16x16/actions/zoom-fit-width.png
   /usr/share/evince/icons/hicolor/16x16/actions/zoom.png
+  /usr/share/evince/icons/hicolor/22x22/actions/eye.png
   /usr/share/evince/icons/hicolor/22x22/actions/view-page-continuous.png
   /usr/share/evince/icons/hicolor/22x22/actions/view-page-facing.png
   /usr/share/evince/icons/hicolor/22x22/actions/zoom-fit-page.png
@@ -176,6 +127,8 @@ Files included in the binary packages:
   /usr/share/gnome/help/evince/bg/figures/evince_start_window.png
   /usr/share/gnome/help/evince/ca/evince.xml
   /usr/share/gnome/help/evince/ca/figures/evince_start_window.png
+  /usr/share/gnome/help/evince/cs/evince.xml
+  /usr/share/gnome/help/evince/cs/figures/evince_start_window.png
   /usr/share/gnome/help/evince/de/evince.xml
   /usr/share/gnome/help/evince/de/figures/evince_start_window.png
   /usr/share/gnome/help/evince/el/evince.xml
@@ -184,6 +137,8 @@ Files included in the binary packages:
   /usr/share/gnome/help/evince/en_GB/figures/evince_start_window.png
   /usr/share/gnome/help/evince/es/evince.xml
   /usr/share/gnome/help/evince/es/figures/evince_start_window.png
+  /usr/share/gnome/help/evince/eu/evince.xml
+  /usr/share/gnome/help/evince/eu/figures/evince_start_window.png
   /usr/share/gnome/help/evince/fi/evince.xml
   /usr/share/gnome/help/evince/fi/figures/evince_start_window.png
   /usr/share/gnome/help/evince/fr/evince.xml
@@ -206,77 +161,17 @@ Files included in the binary packages:
   /usr/share/gnome/help/evince/sv/figures/evince_start_window.png
   /usr/share/gnome/help/evince/uk/evince.xml
   /usr/share/gnome/help/evince/uk/figures/evince_start_window.png
-  /usr/share/gnome/help/evince/vi/evince.xml
-  /usr/share/gnome/help/evince/vi/figures/evince_start_window.png
   /usr/share/gnome/help/evince/zh_CN/evince.xml
   /usr/share/gnome/help/evince/zh_CN/figures/evince_start_window.png
-  /usr/share/gtk-doc/html/evince/EvAttachment.html
-  /usr/share/gtk-doc/html/evince/EvNavigationAction.html
-  /usr/share/gtk-doc/html/evince/EvNavigationActionWidget.html
-  /usr/share/gtk-doc/html/evince/EvPageAction.html
-  /usr/share/gtk-doc/html/evince/EvPageActionWidget.html
-  /usr/share/gtk-doc/html/evince/EvWindow.html
-  /usr/share/gtk-doc/html/evince/evince-EvHistory.html
-  /usr/share/gtk-doc/html/evince/evince-EvImage.html
-  /usr/share/gtk-doc/html/evince/evince-EvJobFind.html
-  /usr/share/gtk-doc/html/evince/evince-EvPasswordDialog.html
-  /usr/share/gtk-doc/html/evince/evince-EvPasswordView.html
-  /usr/share/gtk-doc/html/evince/evince-EvRenderContext.html
-  /usr/share/gtk-doc/html/evince/evince-EvSidebar.html
-  /usr/share/gtk-doc/html/evince/evince-EvSidebarAttachments.html
-  /usr/share/gtk-doc/html/evince/evince-EvSidebarLinks.html
-  /usr/share/gtk-doc/html/evince/evince-EvSidebarThumbnails.html
-  /usr/share/gtk-doc/html/evince/evince-EvTooltip.html
-  /usr/share/gtk-doc/html/evince/evince-ev-async-renderer.html
-  /usr/share/gtk-doc/html/evince/evince-ev-document-factory.html
-  /usr/share/gtk-doc/html/evince/evince-ev-document-find.html
-  /usr/share/gtk-doc/html/evince/evince-ev-document-fonts.html
-  /usr/share/gtk-doc/html/evince/evince-ev-document-images.html
-  /usr/share/gtk-doc/html/evince/evince-ev-document-info.html
-  /usr/share/gtk-doc/html/evince/evince-ev-document-links.html
-  /usr/share/gtk-doc/html/evince/evince-ev-document-misc.html
-  /usr/share/gtk-doc/html/evince/evince-ev-document-security.html
-  /usr/share/gtk-doc/html/evince/evince-ev-document-thumbnails.html
-  /usr/share/gtk-doc/html/evince/evince-ev-document-transition.html
-  /usr/share/gtk-doc/html/evince/evince-ev-document.html
-  /usr/share/gtk-doc/html/evince/evince-ev-file-exporter.html
-  /usr/share/gtk-doc/html/evince/evince-ev-file-helpers.html
-  /usr/share/gtk-doc/html/evince/evince-ev-link-action.html
-  /usr/share/gtk-doc/html/evince/evince-ev-link-dest.html
-  /usr/share/gtk-doc/html/evince/evince-ev-link.html
-  /usr/share/gtk-doc/html/evince/evince-ev-metadata-manager.html
-  /usr/share/gtk-doc/html/evince/evince-ev-page-cache.html
-  /usr/share/gtk-doc/html/evince/evince-ev-pixbuf-cache.html
-  /usr/share/gtk-doc/html/evince/evince-ev-properties-dialog.html
-  /usr/share/gtk-doc/html/evince/evince-ev-properties-fonts.html
-  /usr/share/gtk-doc/html/evince/evince-ev-selection.html
-  /usr/share/gtk-doc/html/evince/evince-ev-sidebar-page.html
-  /usr/share/gtk-doc/html/evince/evince-ev-stock-icons.html
-  /usr/share/gtk-doc/html/evince/evince-ev-utils.html
-  /usr/share/gtk-doc/html/evince/evince-ev-view-accessible.html
-  /usr/share/gtk-doc/html/evince/evince-ev-view.html
-  /usr/share/gtk-doc/html/evince/evince-ev-window-title.html
-  /usr/share/gtk-doc/html/evince/evince.devhelp
-  /usr/share/gtk-doc/html/evince/evince.devhelp2
-  /usr/share/gtk-doc/html/evince/home.png
-  /usr/share/gtk-doc/html/evince/index.html
-  /usr/share/gtk-doc/html/evince/index.sgml
-  /usr/share/gtk-doc/html/evince/ix01.html
-  /usr/share/gtk-doc/html/evince/left.png
-  /usr/share/gtk-doc/html/evince/pt01.html
-  /usr/share/gtk-doc/html/evince/pt02.html
-  /usr/share/gtk-doc/html/evince/pt03.html
-  /usr/share/gtk-doc/html/evince/pt04.html
-  /usr/share/gtk-doc/html/evince/right.png
-  /usr/share/gtk-doc/html/evince/style.css
-  /usr/share/gtk-doc/html/evince/up.png
   /usr/share/icons/hicolor/16x16/apps/evince.png
   /usr/share/icons/hicolor/22x22/apps/evince.png
   /usr/share/icons/hicolor/24x24/apps/evince.png
   /usr/share/icons/hicolor/48x48/apps/evince.png
   /usr/share/icons/hicolor/scalable/apps/evince.svg
+  /usr/share/locale/af/LC_MESSAGES/evince.mo
   /usr/share/locale/ar/LC_MESSAGES/evince.mo
   /usr/share/locale/as/LC_MESSAGES/evince.mo
+  /usr/share/locale/ast/LC_MESSAGES/evince.mo
   /usr/share/locale/be/LC_MESSAGES/evince.mo
   /usr/share/locale/be@latin/LC_MESSAGES/evince.mo
   /usr/share/locale/bg/LC_MESSAGES/evince.mo
@@ -314,6 +209,7 @@ Files included in the binary packages:
   /usr/share/locale/ku/LC_MESSAGES/evince.mo
   /usr/share/locale/lt/LC_MESSAGES/evince.mo
   /usr/share/locale/lv/LC_MESSAGES/evince.mo
+  /usr/share/locale/mai/LC_MESSAGES/evince.mo
   /usr/share/locale/mg/LC_MESSAGES/evince.mo
   /usr/share/locale/mk/LC_MESSAGES/evince.mo
   /usr/share/locale/ml/LC_MESSAGES/evince.mo
@@ -353,10 +249,12 @@ Files included in the binary packages:
   /usr/share/omf/evince/evince-C.omf
   /usr/share/omf/evince/evince-bg.omf
   /usr/share/omf/evince/evince-ca.omf
+  /usr/share/omf/evince/evince-cs.omf
   /usr/share/omf/evince/evince-de.omf
   /usr/share/omf/evince/evince-el.omf
   /usr/share/omf/evince/evince-en_GB.omf
   /usr/share/omf/evince/evince-es.omf
+  /usr/share/omf/evince/evince-eu.omf
   /usr/share/omf/evince/evince-fi.omf
   /usr/share/omf/evince/evince-fr.omf
   /usr/share/omf/evince/evince-it.omf
@@ -368,8 +266,140 @@ Files included in the binary packages:
   /usr/share/omf/evince/evince-sr.omf
   /usr/share/omf/evince/evince-sv.omf
   /usr/share/omf/evince/evince-uk.omf
-  /usr/share/omf/evince/evince-vi.omf
   /usr/share/omf/evince/evince-zh_CN.omf
+
+(libevdocument1)
+  /usr/bin/cygevdocument-1.dll
+  /usr/lib/evince/1/backends/comicsdocument.evince-backend
+  /usr/lib/evince/1/backends/cygcomicsdocument.dll
+  /usr/lib/evince/1/backends/cygdjvudocument.dll
+  /usr/lib/evince/1/backends/cygdvidocument.dll
+  /usr/lib/evince/1/backends/cygimpressdocument.dll
+  /usr/lib/evince/1/backends/cygpdfdocument.dll
+  /usr/lib/evince/1/backends/cygpixbufdocument.dll
+  /usr/lib/evince/1/backends/cygpsdocument.dll
+  /usr/lib/evince/1/backends/cygtiffdocument.dll
+  /usr/lib/evince/1/backends/djvudocument.evince-backend
+  /usr/lib/evince/1/backends/dvidocument.evince-backend
+  /usr/lib/evince/1/backends/impressdocument.evince-backend
+  /usr/lib/evince/1/backends/libcomicsdocument.la
+  /usr/lib/evince/1/backends/libdjvudocument.la
+  /usr/lib/evince/1/backends/libdvidocument.la
+  /usr/lib/evince/1/backends/libimpressdocument.la
+  /usr/lib/evince/1/backends/libpdfdocument.la
+  /usr/lib/evince/1/backends/libpixbufdocument.la
+  /usr/lib/evince/1/backends/libpsdocument.la
+  /usr/lib/evince/1/backends/libtiffdocument.la
+  /usr/lib/evince/1/backends/pdfdocument.evince-backend
+  /usr/lib/evince/1/backends/pixbufdocument.evince-backend
+  /usr/lib/evince/1/backends/psdocument.evince-backend
+  /usr/lib/evince/1/backends/tiffdocument.evince-backend
+
+(libevdocument-devel)
+  /usr/include/evince/2.25/evince-document.h
+  /usr/include/evince/2.25/libdocument/ev-async-renderer.h
+  /usr/include/evince/2.25/libdocument/ev-attachment.h
+  /usr/include/evince/2.25/libdocument/ev-backends-manager.h
+  /usr/include/evince/2.25/libdocument/ev-document-factory.h
+  /usr/include/evince/2.25/libdocument/ev-document-find.h
+  /usr/include/evince/2.25/libdocument/ev-document-fonts.h
+  /usr/include/evince/2.25/libdocument/ev-document-forms.h
+  /usr/include/evince/2.25/libdocument/ev-document-images.h
+  /usr/include/evince/2.25/libdocument/ev-document-info.h
+  /usr/include/evince/2.25/libdocument/ev-document-layers.h
+  /usr/include/evince/2.25/libdocument/ev-document-links.h
+  /usr/include/evince/2.25/libdocument/ev-document-misc.h
+  /usr/include/evince/2.25/libdocument/ev-document-security.h
+  /usr/include/evince/2.25/libdocument/ev-document-thumbnails.h
+  /usr/include/evince/2.25/libdocument/ev-document-transition.h
+  /usr/include/evince/2.25/libdocument/ev-document-type-builtins.h
+  /usr/include/evince/2.25/libdocument/ev-document.h
+  /usr/include/evince/2.25/libdocument/ev-file-exporter.h
+  /usr/include/evince/2.25/libdocument/ev-file-helpers.h
+  /usr/include/evince/2.25/libdocument/ev-form-field.h
+  /usr/include/evince/2.25/libdocument/ev-image.h
+  /usr/include/evince/2.25/libdocument/ev-init.h
+  /usr/include/evince/2.25/libdocument/ev-layer.h
+  /usr/include/evince/2.25/libdocument/ev-link-action.h
+  /usr/include/evince/2.25/libdocument/ev-link-dest.h
+  /usr/include/evince/2.25/libdocument/ev-link.h
+  /usr/include/evince/2.25/libdocument/ev-page.h
+  /usr/include/evince/2.25/libdocument/ev-render-context.h
+  /usr/include/evince/2.25/libdocument/ev-selection.h
+  /usr/include/evince/2.25/libdocument/ev-transition-effect.h
+  /usr/include/evince/2.25/libdocument/ev-version.h
+  /usr/lib/libevdocument.dll.a
+  /usr/lib/libevdocument.la
+  /usr/lib/pkgconfig/evince-document-2.25.pc
+  /usr/share/gtk-doc/html/libevdocument/EvAttachment.html
+  /usr/share/gtk-doc/html/libevdocument/EvFormFieldSignature.html
+  /usr/share/gtk-doc/html/libevdocument/EvImage.html
+  /usr/share/gtk-doc/html/libevdocument/EvLayer.html
+  /usr/share/gtk-doc/html/libevdocument/EvPage.html
+  /usr/share/gtk-doc/html/libevdocument/EvRenderContext.html
+  /usr/share/gtk-doc/html/libevdocument/data.html
+  /usr/share/gtk-doc/html/libevdocument/helper.html
+  /usr/share/gtk-doc/html/libevdocument/home.png
+  /usr/share/gtk-doc/html/libevdocument/index.html
+  /usr/share/gtk-doc/html/libevdocument/index.sgml
+  /usr/share/gtk-doc/html/libevdocument/interfaces.html
+  /usr/share/gtk-doc/html/libevdocument/left.png
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-async-renderer.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-backends-manager.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-document-factory.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-document-find.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-document-fonts.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-document-forms.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-document-images.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-document-info.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-document-layers.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-document-links.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-document-misc.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-document-security.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-document-thumbnails.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-document-transition.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-document.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-file-exporter.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-file-helpers.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-init.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-link-action.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-link-dest.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-link.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-selection.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument-ev-transition-effect.html
+  /usr/share/gtk-doc/html/libevdocument/libevdocument.devhelp
+  /usr/share/gtk-doc/html/libevdocument/libevdocument.devhelp2
+  /usr/share/gtk-doc/html/libevdocument/right.png
+  /usr/share/gtk-doc/html/libevdocument/style.css
+  /usr/share/gtk-doc/html/libevdocument/up.png
+
+(libevview1)
+  /usr/bin/cygevview-1.dll
+
+(libevview-devel)
+  /usr/include/evince/2.25/evince-view.h
+  /usr/include/evince/2.25/libview/ev-job-scheduler.h
+  /usr/include/evince/2.25/libview/ev-jobs.h
+  /usr/include/evince/2.25/libview/ev-page-cache.h
+  /usr/include/evince/2.25/libview/ev-view-type-builtins.h
+  /usr/include/evince/2.25/libview/ev-view.h
+  /usr/lib/libevview.dll.a
+  /usr/lib/libevview.la
+  /usr/lib/pkgconfig/evince-view-2.25.pc
+  /usr/share/gtk-doc/html/libevview/EvJobExport.html
+  /usr/share/gtk-doc/html/libevview/ch01.html
+  /usr/share/gtk-doc/html/libevview/home.png
+  /usr/share/gtk-doc/html/libevview/index.html
+  /usr/share/gtk-doc/html/libevview/index.sgml
+  /usr/share/gtk-doc/html/libevview/left.png
+  /usr/share/gtk-doc/html/libevview/libevview-ev-job-scheduler.html
+  /usr/share/gtk-doc/html/libevview/libevview-ev-page-cache.html
+  /usr/share/gtk-doc/html/libevview/libevview-ev-view.html
+  /usr/share/gtk-doc/html/libevview/libevview.devhelp
+  /usr/share/gtk-doc/html/libevview/libevview.devhelp2
+  /usr/share/gtk-doc/html/libevview/right.png
+  /usr/share/gtk-doc/html/libevview/style.css
+  /usr/share/gtk-doc/html/libevview/up.png
 
 (nautilus-evince)
   /usr/lib/nautilus/extensions-2.0/cygevince-properties-page.dll
@@ -379,32 +409,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 2.24.2-1 -----
-Version bump.
-
------ version 2.24.1-1 -----
-Version bump for GNOME 2.24.
-
------ version 2.22.2-2 -----
-Use libspectre for PostScript instead of gs-x11.
-
------ version 2.22.2-1 -----
-Version bump for GNOME 2.22.
-
------ version 2.20.2-1 -----
-Version bump for GNOME 2.20.
-
------ version 0.8.3-1 -----
-Version bump for GNOME 2.18.
-
------ version 0.6.1-1 -----
-Version bump for GNOME 2.16.
-
------ version 0.4.0-2 -----
-Rebuilt with support for D-BUS 0.6x and DjVu files.
-
------ version 0.4.0-1 -----
-Initial release for Cygwin.
+----- version 2.26.1-1 -----
+Initial release of GNOME 2.26 for Cygwin 1.7.
 
 
 Cygwin port maintained by:

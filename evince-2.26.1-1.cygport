@@ -1,0 +1,35 @@
+inherit gnome2
+
+DESCRIPTION="GNOME document viewer"
+HOMEPAGE="http://www.gnome.org/projects/evince/"
+
+PATCH_URI="2.26.1-no-undefined.patch"
+
+PKG_NAMES="${PN} libevdocument1 libevdocument-devel libevview1 libevview-devel nautilus-${PN}"
+evince_CONTENTS="--exclude=gtk-doc etc/ usr/bin/evince* usr/share/"
+libevdocument1_CONTENTS="usr/bin/cygevdocument-1.dll usr/lib/evince/1/"
+libevdocument_devel_CONTENTS="usr/include/evince/*/evince-document.h
+                              usr/include/evince/*/libdocument/
+                              usr/lib/libevdocument.* usr/lib/pkgconfig/evince-document-*
+                              usr/share/gtk-doc/html/libevdocument/"
+libevview1_CONTENTS="usr/bin/cygevview-1.dll"
+libevview_devel_CONTENTS="usr/include/evince/*/evince-view.h
+                          usr/include/evince/*/libview/
+                          usr/lib/libevview.* usr/lib/pkgconfig/evince-view-*
+                          usr/share/gtk-doc/html/libevview/"
+nautilus_evince_CONTENTS="usr/lib/nautilus/"
+PKG_IGNORE="usr/share/gtk-doc/html/evince/"
+
+CYGCONF_ARGS="
+	--enable-comics
+	--enable-dbus
+	--enable-djvu
+	--enable-dvi --disable-t1lib
+	--enable-impress
+	--enable-nautilus
+	--enable-pdf
+	--enable-pixbuf
+	--enable-ps
+	--enable-thumbnailer
+	--enable-tiff
+"
