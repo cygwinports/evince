@@ -3,8 +3,6 @@ inherit gnome2
 DESCRIPTION="GNOME document viewer"
 HOMEPAGE="http://www.gnome.org/projects/evince/"
 
-PATCH_URI="2.26.1-no-undefined.patch"
-
 PKG_NAMES="${PN} libevdocument1 libevdocument-devel libevview1 libevview-devel nautilus-${PN}"
 evince_CONTENTS="--exclude=gtk-doc etc/ usr/bin/evince* usr/share/"
 libevdocument1_CONTENTS="usr/bin/cygevdocument-1.dll usr/lib/evince/1/"
