@@ -1,0 +1,22 @@
+--- origsrc/evince-2.28.1/libdocument/Makefile.am	2009-10-19 12:28:16.000000000 -0500
++++ src/evince-2.28.1/libdocument/Makefile.am	2009-10-29 20:48:31.356796400 -0500
+@@ -144,7 +144,7 @@ EvinceDocument-$(EV_API_VERSION).gir: li
+ 	--include=Gdk-2.0 \
+ 	--include=GdkPixbuf-2.0 \
+ 	--include=Gtk-2.0 \
+-	--library=evdocument \
++	--library=libevdocument.la \
+ 	--libtool="$(SHAVE_SAVED_LIBTOOL)" \
+ 	--output $@ \
+ 	--pkg evince-document-$(EV_API_VERSION) \
+--- origsrc/evince-2.28.1/libview/Makefile.am	2009-10-19 12:28:16.000000000 -0500
++++ src/evince-2.28.1/libview/Makefile.am	2009-10-29 20:48:53.196826600 -0500
+@@ -113,7 +113,7 @@ EvinceView-$(EV_API_VERSION).gir: libevv
+ 	--include=GdkPixbuf-2.0 \
+ 	--include=Gtk-2.0 \
+ 	--include=EvinceDocument-$(EV_API_VERSION) \
+-	--library=evview \
++	--library=libevview.la \
+ 	--libtool="$(SHAVE_SAVED_LIBTOOL)" \
+ 	--output $@ \
+ 	--pkg evince-document-$(EV_API_VERSION) \

@@ -1,0 +1,11 @@
+--- origsrc/evince-2.28.1/configure.ac	2009-10-19 12:36:34.000000000 -0500
++++ src/evince-2.28.1/configure.ac	2009-10-29 20:57:55.912926100 -0500
+@@ -94,7 +94,7 @@ AC_ARG_WITH([platform],
+     *) AC_MSG_ERROR([invalid argument "$withval" for --with-platform]) ;;
+    esac],
+   [case "$host" in
+-     *-*-mingw*|*-*-cygwin*) with_platform="win32" ;;
++     *-*-mingw*) with_platform="win32" ;;
+      *) with_platform=gnome ;;
+    esac])
+ 
