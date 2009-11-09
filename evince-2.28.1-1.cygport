@@ -7,7 +7,7 @@ PATCH_URI="2.28-introspection.patch
            2.28-cygwin-not-win32.patch"
 
 PKG_NAMES="${PN} libevdocument1 libevdocument-devel libevview1 libevview-devel
-           gobject-introspection-Evince2.25 nautilus-${PN}"
+           girepository-Evince2.25 nautilus-${PN}"
 evince_CONTENTS="--exclude=gtk-doc --exclude=gir-1.0 etc/ usr/bin/evince* usr/share/"
 libevdocument1_CONTENTS="usr/bin/cygevdocument-1.dll usr/lib/evince/1/"
 libevdocument_devel_CONTENTS="usr/include/evince/*/evince-document.h
@@ -19,7 +19,7 @@ libevview_devel_CONTENTS="usr/include/evince/*/evince-view.h
                           usr/include/evince/*/libview/
                           usr/lib/libevview.* usr/lib/pkgconfig/evince-view-*
                           usr/share/gtk-doc/html/libevview/"
-gobject_introspection_Evince2_25_CONTENTS="usr/*/gir*/Evince*-2.25.*"
+girepository_Evince2_25_CONTENTS="usr/*/gir*/Evince*-2.25.*"
 nautilus_evince_CONTENTS="usr/lib/nautilus/"
 PKG_IGNORE="usr/share/gtk-doc/html/evince/"
 

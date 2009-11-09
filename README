@@ -70,7 +70,7 @@ Build instructions:
 This will create:
   /usr/src/evince-2.28.1-X-src.tar.bz2
   /usr/src/evince-2.28.1-X.tar.bz2
-  /usr/src/gobject-introspection-Evince2.25-2.28.1-X.tar.bz2
+  /usr/src/girepository-Evince2.25-2.28.1-X.tar.bz2
   /usr/src/libevdocument-devel-2.28.1-X.tar.bz2
   /usr/src/libevdocument1-2.28.1-X.tar.bz2
   /usr/src/libevview-devel-2.28.1-X.tar.bz2
@@ -83,6 +83,7 @@ Port Notes:
 
 ----- version 2.28.1-1 -----
 Version bump for GNOME 2.28.
+Renamed girepository package.
 
 ----- version 2.26.2-2 -----
 Added GObjectIntrospection data.

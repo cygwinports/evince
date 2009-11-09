@@ -1,5 +1,5 @@
 category: Gnome Graphics Text
-requires: libevdocument1 libevview1 gobject-introspection-Gtk2.0
+requires: libevdocument1 libevview1 girepository-Gtk2.0
 external-source: evince
 sdesc: "GNOME document viewer libraries (GObjectIntrospection data)"
 ldesc: "Evince is a document viewer for multiple document formats. It
