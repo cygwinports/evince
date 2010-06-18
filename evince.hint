@@ -1,5 +1,5 @@
 category: Gnome Graphics Text
-requires: GConf2 libatk1.0_0 libcairo2 libdbus-glib_1_2 libevdocument1 libevview1 libgcc1 libgconf2_4 libgdk_pixbuf2.0_0 libglib2.0_0 libgnome-keyring0 libgtk2.0_0 libICE6 libintl8 libpoppler-glib_4 libSM6 libX11_6 libxml2
+requires: GConf2 libatk1.0_0 libcairo2 libdbus-glib_1_2 libevdocument2 libevview2 libgcc1 libgconf2_4 libgdk_pixbuf2.0_0 libglib2.0_0 libgnome-keyring0 libgtk2.0_0 libICE6 libintl8 libSM6 libX11_6 libxml2
 sdesc: "GNOME multiple format document viewer"
 ldesc: "Evince is a document viewer for multiple document formats. It
 currently supports pdf, postscript, djvu, tiff and dvi. The goal of

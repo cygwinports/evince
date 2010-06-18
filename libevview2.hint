@@ -1,7 +1,7 @@
 category: Gnome Graphics Text
-requires: libevdocument1 libevview1 girepository-Gtk2.0
+requires: libatk1.0_0 libcairo2 libevdocument2 libgcc1 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk2.0_0 libpango1.0_0
 external-source: evince
-sdesc: "GNOME document viewer libraries (GObjectIntrospection data)"
+sdesc: "GNOME document viewer library (runtime)"
 ldesc: "Evince is a document viewer for multiple document formats. It
 currently supports pdf, postscript, djvu, tiff and dvi. The goal of
 evince is to replace the multiple document viewers that exist on the
