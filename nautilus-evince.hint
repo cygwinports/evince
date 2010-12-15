@@ -1,5 +1,5 @@
 category: Gnome
-requires: libevdocument2 libgcc1 libglib2.0_0 libgtk2.0_0 nautilus
+requires: libevdocument2 libglib2.0_0 libgtk2.0_0 nautilus
 external-source: evince
 sdesc: "GNOME Nautilus PDF properties extension"
 ldesc: "Evince is a document viewer for multiple document formats. It
