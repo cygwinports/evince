@@ -5,20 +5,20 @@ HOMEPAGE="http://www.gnome.org/projects/evince/"
 
 PATCH_URI="2.28-cygwin-not-win32.patch"
 
-PKG_NAMES="${PN} libevdocument3 libevdocument-devel libevview3 libevview-devel
-           girepository-Evince2.32 nautilus-${PN}"
+PKG_NAMES="${PN} libevdocument3_3 libevdocument3-devel libevview3_3 libevview3-devel
+           girepository-Evince3.0 nautilus-${PN}"
 evince_CONTENTS="--exclude=gtk-doc --exclude=gir-1.0 etc/ usr/bin/evince* usr/lib/evince/*.exe usr/share/"
-libevdocument3_CONTENTS="usr/bin/cygevdocument-3.dll usr/lib/evince/3/"
-libevdocument_devel_CONTENTS="usr/include/evince/*/evince-document.h
+libevdocument3_3_CONTENTS="usr/bin/cygevdocument3-3.dll usr/lib/evince/3/"
+libevdocument3_devel_CONTENTS="usr/include/evince/*/evince-document.h
                               usr/include/evince/*/libdocument/
-                              usr/lib/libevdocument.* usr/lib/pkgconfig/evince-document-*
+                              usr/lib/libevdocument* usr/lib/pkgconfig/evince-document-*
                               usr/share/gtk-doc/html/libevdocument*/"
-libevview3_CONTENTS="usr/bin/cygevview-3.dll"
-libevview_devel_CONTENTS="usr/include/evince/*/evince-view.h
+libevview3_3_CONTENTS="usr/bin/cygevview3-3.dll"
+libevview3_devel_CONTENTS="usr/include/evince/*/evince-view.h
                           usr/include/evince/*/libview/
-                          usr/lib/libevview.* usr/lib/pkgconfig/evince-view-*
+                          usr/lib/libevview* usr/lib/pkgconfig/evince-view-*
                           usr/share/gtk-doc/html/libevview*/"
-girepository_Evince2_32_CONTENTS="usr/*/gir*/Evince*-2.32.*"
+girepository_Evince3_0_CONTENTS="usr/*/gir*/Evince*-3.0.*"
 nautilus_evince_CONTENTS="usr/lib/nautilus/"
 PKG_IGNORE="usr/share/gtk-doc/html/evince/"
 
