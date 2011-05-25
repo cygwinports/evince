@@ -1,0 +1,27 @@
+inherit gnome2
+
+DESCRIPTION="GNOME document viewer"
+HOMEPAGE="http://www.gnome.org/projects/evince/"
+
+PATCH_URI="2.28-cygwin-not-win32.patch"
+
+PKG_NAMES="${PN} ${PN}-devel nautilus-${PN}"
+evince_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/evince/ usr/lib/gir* usr/share/"
+evince_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
+nautilus_evince_CONTENTS="usr/lib/nautilus/"
+
+CYGCONF_ARGS="
+	--libexecdir=/usr/lib/${PN}
+	--enable-comics
+	--enable-dbus
+	--enable-djvu
+	--enable-dvi --disable-t1lib
+	--enable-impress
+	--enable-introspection
+	--enable-nautilus
+	--enable-pdf
+	--enable-pixbuf
+	--enable-ps
+	--enable-thumbnailer
+	--enable-tiff
+"
