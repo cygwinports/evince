@@ -1,5 +1,5 @@
 category: Gnome Graphics Text
-requires: evince libatk1.0-devel libcairo-devel libgailutil3-devel libgdk_pixbuf2.0-devel libglib2.0-devel libgtk3-devel libpango1.0-devel
+requires: evince libcairo-devel libgdk_pixbuf2.0-devel libglib2.0-devel libgtk3-devel
 external-source: evince
 sdesc: "GNOME document viewer (development)"
 ldesc: "Evince is a document viewer for multiple document formats. It
