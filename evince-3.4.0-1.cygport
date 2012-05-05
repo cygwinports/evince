@@ -16,7 +16,7 @@ DEPEND="gnome-common gnome-doc-utils
 	pkgconfig(libxml-2.0)
 	pkgconfig(poppler-glib)
 	pkgconfig(sm)
-	tetex-devel"
+	libkpathsea-devel"
 
 PKG_NAMES="${PN} ${PN}-devel nautilus-${PN}"
 evince_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/evince/ usr/lib/gir* usr/share/"
