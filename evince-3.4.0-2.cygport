@@ -1,0 +1,58 @@
+inherit gnome2
+
+CATEGORY="Gnome Graphics Text"
+SUMMARY="GNOME document viewer"
+DESCRIPTION="Evince is a document viewer for multiple document formats. It
+currently supports pdf, postscript, djvu, tiff and dvi. The goal of
+evince is to replace the multiple document viewers that exist on the
+GNOME Desktop with a single simple application."
+HOMEPAGE="http://www.gnome.org/projects/evince/"
+
+PATCH_URI="2.28-cygwin-not-win32.patch"
+
+DEPEND="gnome-common gnome-doc-utils
+	girepository(Gtk-3.0)
+	pkgconfig(ddjvuapi)
+	pkgconfig(gail-3.0)
+	pkgconfig(gnome-keyring-1)
+	pkgconfig(libgxps)
+	pkgconfig(libnautilus-extension)
+	pkgconfig(libspectre)
+	pkgconfig(libxml-2.0)
+	pkgconfig(poppler-glib)
+	pkgconfig(sm)
+	libkpathsea-devel"
+
+PKG_NAMES="${PN} libevdocument3_4 libevview3_3 libevince3-devel
+           girepository-Evince3.0 nautilus-${PN}"
+evince_CONTENTS="--exclude=gtk-doc --exclude=gir-1.0 etc/ usr/bin/evince*
+                 usr/lib/evince/*.exe usr/share/"
+libevdocument3_4_SUMMARY="GNOME document rendering library"
+libevdocument3_4_CONTENTS="usr/bin/cygevdocument3-4.dll usr/lib/evince/4/"
+libevview3_3_SUMMARY="${SUMMARY} widget library"
+libevview3_3_CONTENTS="usr/bin/cygevview3-3.dll"
+libevince3_devel_SUMMARY="${SUMMARY} libraries (development)"
+libevince3_devel_CONTENTS="usr/include/ usr/lib/libev* usr/lib/pkgconfig/ usr/share/gtk-doc/"
+girepository_Evince3_0_SUMMARY="${SUMMARY} libraries (GObject Introspection)"
+girepository_Evince3_0_CONTENTS="usr/*/gir*/Evince*-3.0.*"
+nautilus_evince_SUMMARY="Document property page extension for Nautilus"
+nautilus_evince_CONTENTS="usr/lib/nautilus/"
+
+CYGCONF_ARGS="
+	--libexecdir=/usr/lib/${PN}
+	--enable-comics
+	--enable-dbus
+	--enable-djvu
+	--enable-dvi --disable-t1lib
+	--enable-impress
+	--enable-introspection
+	--enable-nautilus
+	--enable-pdf
+	--enable-ps
+	--enable-thumbnailer
+	--enable-tiff
+	--enable-xps
+	--with-smclient=xsmp
+"
+
+KEEP_LA_FILES="none"
