@@ -1,6 +1,9 @@
 inherit gnome2
 
-CATEGORY="Gnome Graphics Text"
+NAME="evince"
+VERSION=3.6.1
+RELEASE=1
+CATEGORY="GNOME Graphics Text"
 SUMMARY="GNOME document viewer"
 DESCRIPTION="Evince is a document viewer for multiple document formats. It
 currently supports pdf, postscript, djvu, tiff and dvi. The goal of
@@ -55,4 +58,3 @@ CYGCONF_ARGS="
 	--with-smclient=xsmp
 "
 
-KEEP_LA_FILES="none"
