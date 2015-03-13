@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="evince"
-VERSION=3.14.1
+VERSION=3.14.2
 RELEASE=1
 CATEGORY="Graphics Text"
 SUMMARY="GNOME document viewer"
