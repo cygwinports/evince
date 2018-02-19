@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="evince"
-VERSION=3.24.1
+VERSION=3.26.0
 RELEASE=1
 CATEGORY="Graphics Text"
 SUMMARY="GNOME document viewer"
@@ -44,6 +44,7 @@ girepository_Evince3_0_SUMMARY="${SUMMARY} libraries (GObject Introspection)"
 girepository_Evince3_0_CONTENTS="usr/*/gir*/Evince*-3.0.*"
 nautilus_evince_SUMMARY="Document property page extension for Nautilus"
 nautilus_evince_CONTENTS="usr/lib/nautilus/"
+PKG_IGNORE="usr/lib/systemd/"
 
 CYGCONF_ARGS="
 	--enable-comics
